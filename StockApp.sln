@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockApp.Web", "StockApp.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockApp.Web.Tests", "StockApp.Web.Tests\StockApp.Web.Tests.csproj", "{C1CB550A-CFD7-4369-B019-82D4255D2129}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockApp.Api", "StockApp.Api\StockApp.Api.csproj", "{38A9866A-BBD0-4D4F-B44A-34A74C44131C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{C1CB550A-CFD7-4369-B019-82D4255D2129}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1CB550A-CFD7-4369-B019-82D4255D2129}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1CB550A-CFD7-4369-B019-82D4255D2129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A9866A-BBD0-4D4F-B44A-34A74C44131C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A9866A-BBD0-4D4F-B44A-34A74C44131C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A9866A-BBD0-4D4F-B44A-34A74C44131C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A9866A-BBD0-4D4F-B44A-34A74C44131C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
