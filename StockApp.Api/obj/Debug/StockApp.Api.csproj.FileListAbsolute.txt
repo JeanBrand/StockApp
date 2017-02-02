@@ -70,3 +70,4 @@ C:\Users\cyril.kgatla\Documents\GitHub\StockApp\StockApp.Api\obj\Debug\StockApp.
 C:\Users\cyril.kgatla\Documents\GitHub\StockApp\StockApp.Api\obj\Debug\StockApp.Api.pdb
 C:\Users\cyril.kgatla\Documents\GitHub\StockApp\StockApp.Api\bin\EntityFramework.SqlServer.dll
 C:\Users\cyril.kgatla\Documents\GitHub\StockApp\StockApp.Api\bin\EntityFramework.SqlServer.xml
+C:\Users\cyril.kgatla\Documents\GitHub\StockApp\StockApp.Api\bin\AutoMapper.dll

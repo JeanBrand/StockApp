@@ -1,10 +1,12 @@
-﻿using System;
+﻿using StockApp.Api.Dtos;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using AutoMapper;
 
 namespace StockApp.Api.Controllers
 {
@@ -13,15 +15,37 @@ namespace StockApp.Api.Controllers
         private stock_dbEntities db = new stock_dbEntities();
 
         // GET api/employee
-        public IQueryable<Employee> GetEmployee()
+        public IEnumerable<DtoEmployee> GetEmployee()
         {
-            return db.Employees;
+            var list = new List<DtoEmployee>();
+
+            //This will use AutoMapper
+            foreach (var emp in db.Employees)
+            {
+                list.Add(new DtoEmployee(){
+                    Id = emp.Id ,
+                    FirstName = emp.FirstName ,
+                    LastName = emp.LastName ,
+                    Email = emp.Email,
+                    Password = emp.Password 
+                });
+            }
+
+            return list;
         }
 
         // POST api/employee
-        public HttpResponseMessage PostEmployee(Employee employee)
+        public HttpResponseMessage PostEmployee(DtoEmployee emp)
         {
-           // employee = new Employee() { Id = 3 };
+           var employee = new Employee()
+            {
+                Id = emp.Id,
+                FirstName = emp.FirstName,
+                LastName = emp.LastName,
+                Email = emp.Email,
+                Password = emp.Password
+            };
+
             if (ModelState.IsValid)
             {
                 db.Employees.Add(employee);
@@ -37,8 +61,17 @@ namespace StockApp.Api.Controllers
         }  
 
         // PUT api/employee/5
-        public HttpResponseMessage PutEmployee(int id, Employee employee)
+        public HttpResponseMessage PutEmployee(int id, DtoEmployee emp)
         {
+            var employee = new Employee()
+            {
+                Id = emp.Id,
+                FirstName = emp.FirstName,
+                LastName = emp.LastName,
+                Email = emp.Email,
+                Password = emp.Password
+            };
+
             if (ModelState.IsValid && id == employee.Id)
             {
                 db.Entry(employee).State = EntityState.Modified;
